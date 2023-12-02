@@ -25,7 +25,7 @@ router.post("/users", async (req, res) => {
   try {
     // await syncDatabase();
     const newUser = await User.create({ firstName, lastName });
-    newUser.save();
+    await newUser.save();
     res.json(newUser);
   } catch (error) {
     console.error("Error creating user:", error);

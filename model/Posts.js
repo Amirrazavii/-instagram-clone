@@ -2,7 +2,6 @@ const { sequelize } = require("./index");
 const { Sequelize, DataTypes, Model } = require("sequelize");
 
 const { User } = require("./User.js");
-const { populate } = require("dotenv");
 
 const Post = sequelize.define("Post", {
   title: {
