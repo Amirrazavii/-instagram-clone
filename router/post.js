@@ -16,13 +16,14 @@ router.get("/Posts", async (req, res) => {
 
 // Example route to add a new user
 router.post("/posts", async (req, res) => {
-  const { title, content, userId } = req.body;
+  const { title, content, price, userId } = req.body;
 
   try {
     // await syncDatabase();
     const newPost = await Post.create({
       title: title,
       content: content,
+      price: price,
       userId: userId,
     });
     newPost.save();

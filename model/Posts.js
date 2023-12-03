@@ -12,13 +12,9 @@ const Post = sequelize.define("Post", {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-  // userId: {
-  //   type: Sequelize.INTEGER,
-  //   references: {
-  //     model: User,
-  //     key: "userId",
-  //   },
-  // },
+  price: {
+    type: DataTypes.BIGINT,
+  },
 });
 
 // Post.belongsTo(User, {
